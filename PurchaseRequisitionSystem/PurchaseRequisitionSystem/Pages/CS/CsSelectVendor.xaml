@@ -1,0 +1,23 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	x:Class="PurchaseRequisitionSystem.CsSelectVendor"
+	x:Name="Window"
+	Title="CsSelectVendor"
+	Width="640" Height="480">
+
+	<Grid x:Name="LayoutRoot">
+		<TextBlock Height="37" Margin="8,17,0,0" TextWrapping="Wrap" Text="Select Vendor" VerticalAlignment="Top" FontSize="24" Width="152" HorizontalAlignment="Left"/>
+		<ListBox SelectionMode="Single" x:Name="lstVendors" Margin="8,67,8,44" FontSize="16">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal" Height="80">
+						<TextBlock Width="200" Height="80" FontSize="12" TextWrapping="Wrap" Padding="10" VerticalAlignment="Center" Text="{Binding VendorName}"/>
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+		<Button x:Name="btnProceed" Style="{DynamicResource Clickable}" Content="Select Vendor" Height="32" Margin="0,0,8,8" VerticalAlignment="Bottom" Background="#FF004912" Width="165" HorizontalAlignment="Right" d:LayoutOverrides="HorizontalAlignment, Width" Click="btnProceed_Click" />
+	</Grid>
+</Window>

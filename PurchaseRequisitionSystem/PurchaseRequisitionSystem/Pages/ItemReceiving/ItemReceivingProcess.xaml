@@ -1,0 +1,39 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="PurchaseRequisitionSystem.ItemReceivingProcess"
+	x:Name="UserControl" d:DesignHeight="480" Width="752" Height="502" Background="White">
+
+	<Grid x:Name="LayoutRoot">
+		<TextBlock Height="37" Margin="8,58.5,0,0" TextWrapping="Wrap" Text="Update Item Receiving" VerticalAlignment="Top" FontSize="24" Width="265" HorizontalAlignment="Left" d:LayoutOverrides="Width"/>
+		<StackPanel Orientation="Horizontal" Height="40" Margin="8,103.5,-8,0" VerticalAlignment="Top" d:LayoutOverrides="Height">
+			<TextBlock FontWeight="Bold" Width="308" Height="40" TextWrapping="Wrap" Padding="10" VerticalAlignment="Center" Text="Item Description"/>
+			<TextBlock  Width="130" Height="40" TextWrapping="Wrap" Padding="10" VerticalAlignment="Center" Text="UOM"/>
+			<TextBlock Width="90" Height="40" TextWrapping="Wrap" Padding="10" VerticalAlignment="Center" Text="# Requested"/>
+			<TextBlock Width="90" Height="40" TextWrapping="Wrap" Padding="10" VerticalAlignment="Center" Text="# Received"/>
+			<TextBlock Width="100" Height="40" TextWrapping="Wrap" Padding="10" VerticalAlignment="Center" Text="DR/Invoice"/>
+		</StackPanel>
+		<ListBox  SelectionMode="Single" x:Name="lstItemReceiving" Margin="8,147.5,8,72.5" FontSize="13.333">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal" Height="80">
+						<TextBlock Width="308" Height="80" TextWrapping="Wrap" Padding="10" VerticalAlignment="Center" Text="{Binding Description}"/>
+						<TextBlock Width="130" Height="40" TextWrapping="Wrap" Padding="10" VerticalAlignment="Center" Text="{Binding UOM}"/>
+						<TextBox FontWeight="Bold" Foreground="Red" Width="90" Height="40" TextWrapping="Wrap" IsReadOnly="True" Padding="10" VerticalAlignment="Center" Text="{Binding QuantityRequested}"/>
+						<TextBox BorderBrush="Black" Foreground="Green" Width="90" Height="40" TextWrapping="Wrap" Padding="10" VerticalAlignment="Center" Text="{Binding QuantityReceived}"/>
+						<TextBox BorderBrush="Black" Width="100" Height="40" TextWrapping="Wrap" Padding="10" VerticalAlignment="Center" Text="{Binding DrInvoiceNumber}"/>
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+		<Button x:Name="btnProceed" Style="{DynamicResource Clickable}" Content="Update and Save" Height="32" Margin="0,0,8,22" VerticalAlignment="Bottom" Background="#FF004912" Width="165" HorizontalAlignment="Right" d:LayoutOverrides="HorizontalAlignment, Width" Click="btnProceed_Click" />
+		<Button x:Name="btnPrevious" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="38" Margin="8,8,0,0" Click="btnPrevious_Click">
+			<Button.Background>
+				<ImageBrush ImageSource="/Purchase Requisition System;component/Content/Previous.png"/>
+			</Button.Background>
+		</Button>
+	</Grid>
+</UserControl>

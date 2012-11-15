@@ -1,0 +1,55 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="PurchaseRequisitionSystem.PurchaseRequestScreen"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Loaded="UserControl_Loaded">
+	<UserControl.Resources>
+		<Style TargetType="{x:Type Button}">
+			<Setter Property="FontFamily" Value="Segoe UI Light"/>
+		</Style>
+	</UserControl.Resources>
+	<Grid x:Name="LayoutRoot" Background="White">
+		<StackPanel Margin="64.5,45,62.5,0" HorizontalAlignment="Center">
+			<StackPanel Height="41" Margin="8,5,8,0" Orientation="Horizontal">
+				<TextBlock HorizontalAlignment="Left" Margin="8,8.5,0,8.5" TextWrapping="Wrap" Text="Items" Width="120" FontSize="16"/>
+				<Button Content="Select Items" Style="{DynamicResource Clickable}" Margin="0,0,0,1" FontSize="13.333" Background="#FF1D50ED" FontWeight="Bold" Width="135" Height="30" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment, Width" Name="btnShowSelect" Click="btnShowSelect_Click" />
+				<Button x:Name="btnAddNewItem" Content="Add Item" Style="{DynamicResource Clickable}" Margin="10,0,0,0" Width="82" FontSize="13.333" Background="#FF258D01" FontWeight="Bold" Click="btnAddNewItem_Click" Height="30" />
+			</StackPanel>
+			<StackPanel Margin="8,5,8,0" Orientation="Horizontal" Height="248">
+				<DataGrid x:FieldModifier="public" x:Name="dgItems" Width="468" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" IsReadOnly="True">
+					<DataGrid.Columns>
+                        <DataGridTextColumn Header="#" Binding="{Binding ItemNumber}" />
+						<DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+						<DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                        <DataGridTextColumn Header="Code/Size" Binding="{Binding CodeSize}" />
+						<DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+						<DataGridTextColumn Header="Stock on Hand" Binding="{Binding StockOnHand}" />
+                        <DataGridTextColumn Header="UOM" Binding="{Binding UOM}" />
+                        <DataGridTextColumn Header="Cost Objective" Binding="{Binding CostObjective}" />
+					</DataGrid.Columns>
+				</DataGrid>
+			</StackPanel>
+			<StackPanel Height="50" Margin="8,0" Orientation="Horizontal">
+				<TextBlock HorizontalAlignment="Left" Margin="8,8.5,0,0" TextWrapping="Wrap" Text="PR Type" Width="120" FontSize="16" Height="26" VerticalAlignment="Top"/>
+				<ComboBox x:Name="comboPRType" Margin="0,8.5,0,14.5" Width="257" BorderBrush="Black">
+					<ComboBoxItem Content="Stock" Uid="1"/>
+					<ComboBoxItem Content="Non-Stock" Uid="0"/>
+				</ComboBox>
+			</StackPanel>
+			<StackPanel Height="46" Margin="8,0" Orientation="Horizontal">
+				<TextBlock HorizontalAlignment="Left" Margin="8,8.5,0,8.5" TextWrapping="Wrap" Text="Purpose" Width="120" FontSize="16"/>
+				<TextBox x:Name="txtPurpose" Margin="0,8.5,0,0" TextWrapping="Wrap" Width="257" BorderBrush="Black" Height="29" VerticalAlignment="Top"/>
+			</StackPanel>
+			<StackPanel Height="40" Margin="8,0" Orientation="Horizontal">
+				<TextBlock HorizontalAlignment="Left" Margin="8,8.5,0,0" TextWrapping="Wrap" Width="120" FontSize="16" Height="26" VerticalAlignment="Top" Text="Date Required"/>
+				<DatePicker x:Name="txtDateRequired" Width="195.64" Height="28.125" />
+				<Button Content="Submit Request" Style="{DynamicResource Clickable}" Margin="10,7,0,8" FontSize="13.333" Background="#FF1D50ED" FontWeight="Bold" Width="125.36" x:Name="btnSubmitRequest" Click="btnSubmitRequest_Click" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" />
+			</StackPanel>
+		</StackPanel>
+		<TextBlock Height="37" Margin="185,8,168,0" TextWrapping="Wrap" Text="PURCHASE REQUEST FORM" VerticalAlignment="Top" FontSize="21.333" FontWeight="Bold" HorizontalAlignment="Center"/>
+	</Grid>
+</UserControl>

@@ -1,0 +1,20 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="PurchaseRequisitionSystem.VicePresident"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Loaded="UserControl_Loaded" Width="750">
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Button x:Name="btnApproveRequests" Style="{DynamicResource Clickable}" Content="Approve Requests" Margin="214,114,385,215" Background="#FF0362BA" FontSize="16" Width="151" Click="btnApproveRequests_Click" Height="151" />
+		<Button x:Name="btnLogout" Style="{DynamicResource Clickable}" Content="Log Out" Margin="591,0,8,8" Background="#FF8F0000" FontSize="16" Width="151" Click="btnLogout_Click" Height="41" VerticalAlignment="Bottom" />
+		<TextBlock Margin="8,0,0,76" TextWrapping="Wrap" Text="Welcome," FontSize="48" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Height="64" Width="195" VerticalAlignment="Bottom" d:LayoutOverrides="Width, Height" HorizontalAlignment="Left"/>
+		<TextBlock x:Name="tbUsername" Margin="207,0,0,76" TextWrapping="Wrap" Text="User" FontSize="48" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Height="64" d:LayoutOverrides="Height" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="425"/>
+		<Button x:Name="btnViewRequests" Style="{DynamicResource Clickable}" Content="View All Requests" Margin="49.833,114,549.167,215" Background="#FF0362BA" FontSize="16" Width="151" Height="151" Click="btnViewRequests_Click" />
+		<Button x:Name="btnCanvasSheet" Style="{DynamicResource Clickable}" Content="Approve Canvas Sheets" Margin="379,114,220,215" Background="#FF0362BA" FontSize="13.333" Width="151" Height="151" Click="btnCanvasSheet_Click" />
+		<Button x:Name="btnPurchaseOrders" Style="{DynamicResource Clickable}" Content="Approve PO" Margin="543,114,56,215" Background="#FF0362BA" FontSize="13.333" Width="151" Height="151" Click="btnPurchaseOrders_Click" />
+	</Grid>
+</UserControl>

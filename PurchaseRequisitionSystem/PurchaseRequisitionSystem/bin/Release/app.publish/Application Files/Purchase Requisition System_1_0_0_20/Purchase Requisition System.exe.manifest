@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="Purchase Requisition System.exe" version="1.0.0.20" publicKeyToken="9a022b64fad2694a" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="Content\iconPRS.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Purchase Requisition System" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="Purchase Requisition System.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EPPlus.dll" size="608256">
+      <assemblyIdentity name="EPPlus" version="3.1.1.0" publicKeyToken="EA159FDAA78159A1" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>HIAIPiNjDJlUPAZvwiYCJdHX8hY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExcelLibrary.dll" size="118784">
+      <assemblyIdentity name="ExcelLibrary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>RcqwcChbVjJlAXdaXsxT9Da9C7A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Infrastructure.dll" size="8192">
+      <assemblyIdentity name="Infrastructure" version="0.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>WrSAPz32F8kL3CEb26ZIEmKnXtI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="itextsharp.dll" size="3612672">
+      <assemblyIdentity name="itextsharp" version="5.2.0.0" publicKeyToken="8354AE6D2174DDCA" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>WpU7O6LnAjpt43p0Vb9/HqGGzkc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Purchase Requisition System.exe" size="1461248">
+      <assemblyIdentity name="Purchase Requisition System" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>4OcgnUelEtzA5xS8kJEEM4HfEao=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WpfPageTransitions.dll" size="16896">
+      <assemblyIdentity name="WpfPageTransitions" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>GiBH1NQcppVs2cEGod+kvHTQ5og=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Content\company_logos\somico.gif" size="3548">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>4p1G9AhMvev6SOcM2FACl0i2I88=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\company_logos\sonic.gif" size="5365">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>3C7Sl8vU+8GLEUswjAPBI73RkpY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\company_logos\steeltech.gif" size="4892">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/oLTwE68Fjdbei6tYiEtVJQBwtM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\iconPRS.ico" size="2481">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>IbtzndIJrts5ROBOjrs/bsh6ysM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Purchase Requisition System.exe.config" size="1433">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KIpYUAjq/scHJb5s/66TO725ri4=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=HOCAMPO-PC\HOCAMPO" issuerKeyHash="73593135eb10ecf839089c50fd815da1532a47f4" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>imuUL1xDHVjDQbXeP7e818EXn4g=</DigestValue></Reference></SignedInfo><SignatureValue>WGA6XYxl1+Z4AO/3czG9y9LYMxYGWxKyreaJZORgxSoHdQG7y36ZKwReQNplJdp6V4rZw58lXUg5USgKtmPPqlizMyaPZHkQ3LfpnPKVacUarrpD6S86MQGgGJVAdg4u2a6MMTnb6q2SPTsc5sZ5U/Q2AqXVyObGLEkX26kUsdM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tcBDOZedeMnCtvBq9EzX7noFKUS1rTD/IY6XGkqqiqJsB+o1Kkd9bPCFEhS0fcmrFZPSt9viayy0BmnbQUdMIaXAro9EhoAXxxMlIxCuhZf8NDotx3O0O44OVsV/9N1cZzgFDrfnK13rlFc2T2V5WG1LX8Iv+hcbpY60DLVW8Y8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="889f17c1d7bcb73fdeb541c3581d435c2f946b8a" Description="" Url=""><as:assemblyIdentity name="Purchase Requisition System.exe" version="1.0.0.20" publicKeyToken="9a022b64fad2694a" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=HOCAMPO-PC\HOCAMPO</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>smuqeLl5iEU5R9maKxDKhyJTxj4=</DigestValue></Reference></SignedInfo><SignatureValue>XH7rSa4EGfXVPvphgzK4liPMlyv/QE9oCTU5OdkESxI9WG6VpTYF3xC4b3P+tgo4yy9fRiMyfz2COhdcwxC/VKaScgYhWrmjcKaPeJtOYQUcOjk8Bgo18LtRRvn3Ohw7wZGbo/vbdK7/0uqzaktT4VAVt/rtorSWgSDgvamFGNY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tcBDOZedeMnCtvBq9EzX7noFKUS1rTD/IY6XGkqqiqJsB+o1Kkd9bPCFEhS0fcmrFZPSt9viayy0BmnbQUdMIaXAro9EhoAXxxMlIxCuhZf8NDotx3O0O44OVsV/9N1cZzgFDrfnK13rlFc2T2V5WG1LX8Iv+hcbpY60DLVW8Y8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQQeKk8GlfzI9C/cdd55+y6jANBgkqhkiG9w0BAQUFADAvMS0wKwYDVQQDHiQASABPAEMAQQBNAFAATwAtAFAAQwBcAEgATwBDAEEATQBQAE8wHhcNMTIwODIyMTUyMzE2WhcNMTMwODIyMjEyMzE2WjAvMS0wKwYDVQQDHiQASABPAEMAQQBNAFAATwAtAFAAQwBcAEgATwBDAEEATQBQAE8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALXAQzmXnXjJwrbwavRM1+56BSlEta0w/yGOlxpKqoqibAfqNSpHfWzwhRIUtH3JqxWT0rfb4msstAZp20FHTCGlwK6PRIaAF8cTJSMQroWX/DQ6LcdztDuODlbFf/TdXGc4BQ635ytd65RXNk9leVhtS1/CL/oXG6WOtAy1VvGPAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAey1ohZ7kBRLOXJ3HQ/ofytxm4au+nFJ0Q4lzyTyUeJGLR0vWAWsHYLZ1oReXVrgzMSTEmK1scmxB+7UzLPpekPszds4qdbafY2+JephCZ+Kzxh+Vrvy5CAm+FLFtDxaNsPeJ6fWgGzF5XIJa6oC+W0IvYmC6As1jxpbkd3M4it0=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

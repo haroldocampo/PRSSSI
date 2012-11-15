@@ -1,0 +1,18 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="PurchaseRequisitionSystem.OverallHead"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Background="White" Loaded="UserControl_Loaded">
+
+	<Grid x:Name="LayoutRoot">
+		<Button x:Name="btnApprove" Style="{DynamicResource Clickable}" Content="Incoming Requests" Margin="83.333,90,405.667,239" Background="#FF0362BA" FontSize="16" Width="151" Click="btnApprove_Click" Height="151" />
+		<Button x:Name="btnViewAllRequests" Style="{DynamicResource Clickable}" Content="View All Requests" Margin="246.333,90,242.667,239" Background="#FF0362BA" FontSize="16" Width="151" Height="151" Click="btnViewAllRequests_Click" />
+		<Button x:Name="btnLogout" Style="{DynamicResource Clickable}" Content="Log Out" Margin="410,90,79,239" Background="#FFBA0303" FontSize="16" Width="151" Click="btnLogout_Click" Height="151" />
+		<TextBlock Margin="8,0,0,8" TextWrapping="Wrap" Text="Welcome," FontSize="48" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Height="64" Width="195" VerticalAlignment="Bottom" d:LayoutOverrides="Width, Height" HorizontalAlignment="Left"/>
+		<TextBlock x:Name="tbUsername" Margin="207,0,0,8" TextWrapping="Wrap" Text="User" FontSize="48" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Height="64" d:LayoutOverrides="Width, Height" Width="425" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+	</Grid>
+</UserControl>

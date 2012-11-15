@@ -1,0 +1,51 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="PurchaseRequisitionSystem.AddItem"
+	x:Name="Window"
+	d:DesignWidth="640" Icon="/Purchase Requisition System;component/Content/PRS.png" ResizeMode="NoResize" Loaded="UserControl_Loaded" Width="640" Height="545" MinWidth="640" MinHeight="525">
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<StackPanel Margin="8,50,8,0" HorizontalAlignment="Center" Height="350" VerticalAlignment="Top">
+			<StackPanel Height="41" Margin="8,10,8,0" Orientation="Horizontal">
+				<TextBlock HorizontalAlignment="Left" Margin="8,8.5,0,8.5" TextWrapping="Wrap" Text="Description" Width="120" FontSize="16"/>
+				<TextBox x:Name="txtDescription" Margin="0,8.5" Width="257" BorderBrush="Black"/>
+			</StackPanel>
+            <StackPanel Margin="8,0" Orientation="Horizontal" Height="41" Name="spCostObj">
+				<TextBlock HorizontalAlignment="Left" Margin="8,8.5,0,8.5" TextWrapping="Wrap" Text="Cost Objective" Width="120" FontSize="16"/>
+				<TextBlock x:Name="tbCostObjectiveName" x:FieldModifier="public" HorizontalAlignment="Left" Margin="8,8.5,0,8.5" TextWrapping="Wrap" Text="None Selected" Width="164" FontSize="16" Height="24" Foreground="#FF666666"/>
+				<Button x:Name="btnCostObjSelect" Style="{DynamicResource Clickable}" Content="Select" Background="#FF345AF3" FontSize="16" BorderThickness="20,1,1,1" Margin="0,10,0,8.5" Width="77" Height="22.5" Click="btnCostObjSelect_Click" />
+			</StackPanel>
+			<StackPanel Height="41" Margin="8,0" Orientation="Horizontal">
+				<TextBlock HorizontalAlignment="Left" Margin="8,8.5,0,8.5" TextWrapping="Wrap" Text="Brand" Width="120" FontSize="16"/>
+				<ComboBox x:Name="cbBrand" Margin="0,8.5" Width="257" BorderBrush="Black"/>
+			</StackPanel>
+			<StackPanel Margin="8,0" Orientation="Horizontal" Height="41" Name="spCategory">
+				<TextBlock HorizontalAlignment="Left" Margin="8,8.5,0,8.5" TextWrapping="Wrap" Text="Code/Size" Width="120" FontSize="16"/>
+				<TextBox x:Name="txtCodeSize" Margin="0,8.5" Width="257" BorderBrush="Black" Height="24"/>
+			</StackPanel>
+			<StackPanel Height="62" Margin="8,5,8,0" Orientation="Horizontal" Name="spUnitOfMeasurement">
+				<TextBlock HorizontalAlignment="Left" Margin="8,8.5,0,8.5" TextWrapping="Wrap" Text="Unit of Measurement" Width="120" FontSize="16"/>
+				<ComboBox x:Name="cbUnitOfMeasurement" Margin="0,8.5,0,26.5" Width="257" BorderBrush="Black" Height="24"/>
+			</StackPanel>
+		</StackPanel>
+		<Button x:Name="btnAddItem" Style="{DynamicResource Clickable}" Content="Add Item" Background="#FF345AF3" FontSize="18.667" BorderThickness="20,1,1,1" Margin="387.5,434,116.5,0" Width="130" Height="30" Click="btnAddItem_Click" VerticalAlignment="Top" d:LayoutOverrides="Height" />
+		<TextBlock Height="37" Margin="185,8,168,0" TextWrapping="Wrap" Text="ADD NEW ITEM" VerticalAlignment="Top" FontSize="21.333" FontWeight="Bold" HorizontalAlignment="Center"/>
+		<StackPanel x:FieldModifier="public" x:Name="stackQuantity" Margin="128,404,264,0" Height="92" VerticalAlignment="Top">
+			<StackPanel Width="224" Orientation="Horizontal" Height="44" VerticalAlignment="Top">
+				<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Request Quantity:" Width="152" FontSize="16" Height="29" VerticalAlignment="Top" Margin="0,6,0,0"/>
+				<TextBox x:Name="txtQuantity" Width="58" BorderBrush="Black" Height="23" TextChanged="txtQuantity_TextChanged" Text="1" VerticalAlignment="Top" d:LayoutOverrides="Height" Margin="0,6,0,0" />
+			</StackPanel>
+			<StackPanel Width="224" Orientation="Horizontal" Height="44" VerticalAlignment="Top">
+				<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Stock On Hand" Width="152" FontSize="16" Height="29" VerticalAlignment="Bottom" Margin="0,0,0,9"/>
+				<TextBox x:Name="txtStockOnHand" Width="58" BorderBrush="Black" Height="23" Text="1" VerticalAlignment="Top" d:LayoutOverrides="Height" Margin="0,6,0,0" TextChanged="txtStockOnHand_TextChanged" />
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</Window>

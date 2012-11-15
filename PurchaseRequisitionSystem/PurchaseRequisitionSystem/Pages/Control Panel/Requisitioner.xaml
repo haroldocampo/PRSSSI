@@ -1,0 +1,16 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="PurchaseRequisitionSystem.Requisitioner"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Background="White" Loaded="UserControl_Loaded">
+
+	<Grid x:Name="LayoutRoot">
+		<Button x:Name="btnLogout" Style="{DynamicResource Clickable}" Content="Log Out" Margin="0,8,8,0" Background="#FFBA0303" FontSize="16" Click="btnLogout_Click" Height="42" HorizontalAlignment="Right" VerticalAlignment="Top" Width="151" />
+		<TextBlock Margin="8,0,0,8" TextWrapping="Wrap" Text="Welcome" FontSize="48" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Height="64" Width="195" VerticalAlignment="Bottom" HorizontalAlignment="Left" d:LayoutOverrides="Width, Height"/>
+		<TextBlock x:Name="tbUsername" Margin="207,0,0,8" TextWrapping="Wrap" Text="User" FontSize="48" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Height="64" Width="425" VerticalAlignment="Bottom" HorizontalAlignment="Left" d:LayoutOverrides="Width, Height"/>
+	</Grid>
+</UserControl>

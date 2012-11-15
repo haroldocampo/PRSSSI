@@ -1,0 +1,32 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="PurchaseRequisitionSystem.Login"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480">
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="0.248*"/>
+			<ColumnDefinition Width="0.514*"/>
+			<ColumnDefinition Width="0.238*"/>
+		</Grid.ColumnDefinitions>
+		<TextBlock Height="40" Margin="120,156,114.28,0" TextWrapping="Wrap" Text="Login" FontSize="26.667" VerticalAlignment="Top" Grid.Column="1" Width="95"/>
+		<StackPanel Margin="11,198.5,26,0" Orientation="Horizontal" VerticalAlignment="Top" Grid.Column="1" Width="295" Height="45">
+			<TextBlock Margin="0,8" TextWrapping="Wrap" Text="Username:" Width="91" VerticalAlignment="Center"/>
+			<TextBox Margin="0,8" TextWrapping="Wrap" Width="184" FontSize="16" Background="{x:Null}" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Name="txtUsername" KeyDown="txtUsername_KeyDown" />
+		</StackPanel>
+		<StackPanel Margin="11,235.5,26,0" Orientation="Horizontal" VerticalAlignment="Top" Grid.Column="1" Width="295" Height="45">
+			<TextBlock Margin="0,8" TextWrapping="Wrap" Text="Password:" Width="91" VerticalAlignment="Center"/>
+			<PasswordBox Margin="0,8" Width="184" FontSize="16" BorderBrush="Black" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtPassword" KeyDown="txtPassword_KeyDown" />
+		</StackPanel>
+		<Button Style="{DynamicResource Clickable}" Content="Log In" Grid.Column="1" Height="44" Background="#FF345AF3" FontSize="21.333" Margin="204,284.5,44.96,0" VerticalAlignment="Top" d:LayoutOverrides="Height" Name="btnLogin" Width="80" Click="btnLogin_Click" />
+		<Button Style="{DynamicResource Clickable}" Content="Register" Grid.Column="1" Height="44" Width="96" Background="#FF129300" FontSize="21.333" Margin="104,284.5,128.96,0" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment, Height" Name="btnRegister" Click="btnRegister_Click" Visibility="Hidden" />
+		<Image Margin="44.566,16,37.96,0" Grid.Column="1" Height="120" VerticalAlignment="Top" Source="/Purchase%20Requisition%20System;component/Pages/Users/sonicsteel.png" />
+		<Image Margin="8,190.5,0,184" Source="somico.png"/>
+		<Image Margin="0,190.5,8,184" Source="steeltech.png" Grid.Column="2"/>
+	</Grid>
+</UserControl>

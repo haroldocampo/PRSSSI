@@ -1,0 +1,23 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="PurchaseRequisitionSystem.ItemManagement"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480">
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Button x:Name="btnCostObjective" Style="{DynamicResource Clickable}" Content="Cost Objective" Margin="165,72,324,288" Background="#FF0362BA" FontSize="16" Width="151" Height="120" Click="btnCostObjective_Click" />
+		<Button x:Name="btnUOM" Style="{DynamicResource Clickable}" Content="Unit of Measurement" Margin="320,72,169,288" Background="#FF0362BA" FontSize="14.667" Width="151" Height="120" Click="btnUOM_Click" />
+		<Button x:Name="btnItemBrand" Style="{DynamicResource Clickable}" Content="Item Brand" Margin="475,72,14,288" Background="#FF0362BA" FontSize="16" Width="151" Height="120" Click="btnItemBrand_Click" />
+		<TextBlock Margin="205,8,215,432" TextWrapping="Wrap" Text="Data Management" FontSize="26.667" Width="220" Height="40"/>
+		<Button x:Name="btnAddVendor" Style="{DynamicResource Clickable}" Content="Vendors" Margin="10,196,479,164" Background="#FF0362BA" FontSize="16" Width="151" Height="120" Click="btnAddVendor_Click" d:LayoutOverrides="VerticalAlignment" />
+		<Button x:Name="btnGenerateReports" Style="{DynamicResource Clickable}" Content="Generate Reports" Margin="475,196,14,164" Background="#FF11BA03" FontSize="16" Width="151" Height="120" Click="btnGenerateReports_Click" d:LayoutOverrides="VerticalAlignment" />
+		<Button x:Name="btnAddItem" Style="{DynamicResource Clickable}" Content="Items" Margin="10,71.446,479,288.553" Background="#FF0362BA" FontSize="16" Width="151" Height="120" Click="btnAddItem_Click" />
+		<Button x:Name="btnRegister" Style="{DynamicResource Clickable}" Content="Register User" Margin="320,196,169,164" Background="#FF0362BA" FontSize="16" Width="151" Height="120" d:LayoutOverrides="VerticalAlignment" Click="btnRegister_Click" />
+		<Button x:Name="btnDepartments" Style="{DynamicResource Clickable}" Content="Departments" Margin="165,196,324,164" Background="#FF0362BA" FontSize="16" Width="151" Height="120" Click="btnDepartments_Click" d:LayoutOverrides="VerticalAlignment" />
+		<Button x:Name="btnBranches" Style="{DynamicResource Clickable}" Content="Branches" Margin="10,320,479,40" Background="#FF0362BA" FontSize="16" Width="151" Height="120" Click="btnBranches_Click" />
+	</Grid>
+</UserControl>

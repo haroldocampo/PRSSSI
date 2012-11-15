@@ -1,0 +1,64 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="PurchaseRequisitionSystem.RfqProcessRequest"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Background="White" Width="828" Height="500">
+	<UserControl.Resources>
+		<Style TargetType="{x:Type Button}">
+			<Setter Property="FontFamily" Value="Segoe UI Light"/>
+		</Style>
+	</UserControl.Resources>
+	<Grid x:Name="LayoutRoot">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="0.498*"/>
+			<ColumnDefinition Width="0.502*"/>
+		</Grid.ColumnDefinitions>
+		<TextBlock Margin="8.172,25,0,438" TextWrapping="Wrap" Text="Process Request for RFQ" FontSize="24" Width="265" Height="37" HorizontalAlignment="Left" d:LayoutOverrides="Width"/>
+		<Grid Margin="8,122,36.66,8" Height="370" d:LayoutOverrides="Width">
+			<DataGrid x:Name="dgItemsFrom" Margin="8,8,8,0" Height="155" VerticalAlignment="Top" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" MouseDoubleClick="dgItemsFrom_MouseDoubleClick">
+				<DataGrid.Columns>
+				<DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                <DataGridTextColumn Header="Code/Size" Binding="{Binding CodeSize}" />
+				<DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                <DataGridTextColumn Header="Cost Objective" Binding="{Binding CostObjective}" />
+				<DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
+			</DataGrid.Columns>
+			</DataGrid>
+			<DataGrid x:Name="dgItemsTo" Margin="8,0,8,8" Height="155" VerticalAlignment="Bottom" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" MouseDoubleClick="dgItemsTo_MouseDoubleClick">
+				<DataGrid.Columns>
+				<DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                <DataGridTextColumn Header="Code/Size" Binding="{Binding CodeSize}" />
+				<DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+				<DataGridTextColumn Header="Cost Objective" Binding="{Binding CostObjective}" />
+				<DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
+			</DataGrid.Columns>
+			</DataGrid>
+			<Button Style="{DynamicResource Clickable}" x:Name="btnInsertItem" Content="Insert" Height="31" Margin="40,170,195,169" Width="82" Background="#FF3733BE" FontWeight="Bold" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Click="btnInsertItem_Click" />
+			<Button Style="{DynamicResource Clickable}" x:Name="btnRemoveItem" Content="Remove" Height="31" Margin="191,170,44,169" Width="80" Background="#FFBE3333" FontWeight="Bold" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Click="btnRemoveItem_Click" />
+		</Grid>
+		<TextBlock Margin="15.5,91,0,381" TextWrapping="Wrap" Text="Items to Quote" FontSize="18.667" Width="131.5" HorizontalAlignment="Left" Height="28"/>
+		<TextBox x:Name="txtSearch" Margin="28,129.25,0,346.75" TextWrapping="Wrap" BorderBrush="Black" Width="192" Height="24" Grid.Column="1" HorizontalAlignment="Left" d:LayoutOverrides="Width" TextChanged="txtSearch_TextChanged" />
+		<Viewbox Margin="228.906,129.5,0,346.75" Width="23.75" Height="23.75" Grid.Column="1" HorizontalAlignment="Left" d:LayoutOverrides="Width">
+			<Image Height="100" Width="100" Source="/Purchase Requisition System;component/Content/Find.png"/>
+		</Viewbox>
+		<DataGrid x:Name="dgVendors" Margin="28,159.5,26,185.5" AutoGenerateColumns="False" Height="155" IsReadOnly="True" SelectionMode="Extended" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" Grid.Column="1">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Name" Binding="{Binding VendorName}" />
+				<DataGridTextColumn Header="Terms" Binding="{Binding Terms}" />
+				<DataGridTextColumn Header="Contact Person" Binding="{Binding ContactPerson}" />
+				<DataGridTextColumn Header="City" Binding="{Binding City}" />
+			</DataGrid.Columns>
+		</DataGrid>
+		<TextBlock Margin="28,90,0,382" TextWrapping="Wrap" Text="Select Vendor" FontSize="18.667" Width="131.5" HorizontalAlignment="Left" Height="28" Grid.Column="1"/>
+		<Path Data="M411,118 L411,492.01203" Fill="Black" Margin="-0.001,118,0,6.988" Stretch="Fill" Stroke="Black" Grid.Column="1" HorizontalAlignment="Left" Width="0.656"/>
+		<TextBlock Margin="28,349.5,0,122.5" TextWrapping="Wrap" Text="Date Required:" FontSize="18.667" Width="131.5" HorizontalAlignment="Left" Height="28" Grid.Column="1"/>
+		<DatePicker x:Name="txtDateRequired" Margin="163.5,349.5,69,122.5" Height="28" Grid.Column="1" Width="185"/>
+		<Button Style="{DynamicResource Clickable}" x:Name="btnSendAndSave" Content="Save and Send Quotation" Height="37" Margin="92.917,409.833,123.083,53.167" Background="#FF007011" FontWeight="Bold" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Grid.Column="1" Width="200" Click="btnSendAndSave_Click" />
+	</Grid>
+</UserControl>

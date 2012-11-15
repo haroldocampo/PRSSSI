@@ -1,0 +1,28 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="PurchaseRequisitionSystem.DataManagement"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Loaded="UserControl_Loaded">
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<TextBlock HorizontalAlignment="Left" Height="47" Margin="8,8,0,0" TextWrapping="Wrap" Text="Data Management" VerticalAlignment="Top" Width="308" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" FontSize="32" Foreground="Black"/>
+		<TextBlock HorizontalAlignment="Left" Height="31" Margin="8,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Text="Name" FontSize="18.667"/>
+		<TextBox x:Name="txtName" Height="31" Margin="83,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" d:LayoutOverrides="VerticalMargin" BorderBrush="Black" FontSize="16" HorizontalAlignment="Left" Width="250"/>
+		<DataGrid x:Name="lstData" Margin="8,149,8,43" BorderBrush="Black" SelectionChanged="lstData_SelectionChanged" AutoGenerateColumns="False" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" CanUserReorder="False" CanUserSort="False"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+		<TextBlock HorizontalAlignment="Left" Height="31" Margin="8,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Text="Search" FontSize="18.667"/>
+		<TextBox x:Name="txtSearch" Height="31" Margin="83,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="Black" FontSize="16" HorizontalAlignment="Left" Width="250" TextChanged="txtSearch_TextChanged" />
+		<Viewbox HorizontalAlignment="Left" Height="31" Margin="337,105,0,0" VerticalAlignment="Top" Width="31">
+			<Image Height="100" Width="100" Source="/Purchase Requisition System;component/Content/Find.png"/>
+		</Viewbox>
+		<Button x:Name="btnAdd" Style="{DynamicResource Clickable}" Content="Add" Margin="337,70,0,0" Background="#FF0362BA" FontSize="16" Height="31" VerticalAlignment="Top" Click="btnAdd_Click" Width="78" HorizontalAlignment="Left" d:LayoutOverrides="Width" />
+		<Button x:Name="btnEdit" Style="{DynamicResource Clickable}" Content="Edit" Margin="419,70,0,0" Background="#FF0362BA" FontSize="16" Height="31" VerticalAlignment="Top" Width="78" HorizontalAlignment="Left" d:LayoutOverrides="Width" Click="btnEdit_Click" />
+	</Grid>
+</UserControl>

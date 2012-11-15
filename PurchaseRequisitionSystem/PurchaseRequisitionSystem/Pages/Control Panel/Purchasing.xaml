@@ -1,0 +1,24 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="PurchaseRequisitionSystem.Purchasing"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Loaded="UserControl_Loaded">
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Button x:Name="btnItemManagement" Style="{DynamicResource Clickable}" Content="Data Management" Margin="12,20,477,0" Background="#FF0362BA" FontSize="16" Width="151" Click="btnItemManagement_Click" Height="151" VerticalAlignment="Top" d:LayoutOverrides="Height" />
+		<Button x:Name="btnApproveRequests" Style="{DynamicResource Clickable}" Content="Incoming Requests" Margin="322,20,167,0" Background="#FF0362BA" FontSize="16" Width="151" Height="151" Click="btnApproveRequests_Click" VerticalAlignment="Top" d:LayoutOverrides="Height" />
+		<Button x:Name="btnLogout" Style="{DynamicResource Clickable}" Content="Log Out" Margin="0,0,8,8" Background="#FFBA0303" FontSize="16" Width="151" Height="38" Click="btnLogout_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" d:LayoutOverrides="Width" />
+		<Button x:Name="btnViewRequests" Style="{DynamicResource Clickable}" Content="View All Requests" Margin="167,20,322,0" Background="#FF0362BA" FontSize="16" Width="151" Height="151" VerticalAlignment="Top" d:LayoutOverrides="Height" Click="btnViewRequests_Click" />
+		<TextBlock Margin="8,0,0,64" TextWrapping="Wrap" Text="Welcome," FontSize="48" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Height="64" Width="195" VerticalAlignment="Bottom" d:LayoutOverrides="Width, Height" HorizontalAlignment="Left"/>
+		<TextBlock x:Name="tbUsername" Margin="207,0,0,64" TextWrapping="Wrap" Text="User" FontSize="48" FontFamily="/Purchase Requisition System;component/Fonts/#Segoe WP Light" Height="64" d:LayoutOverrides="Width, Height" Width="425" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+		<Button x:Name="btnRfq" Style="{DynamicResource Clickable}" Content="RFQ" Margin="12,183,477,146" Background="#FF0362BA" FontSize="16" Width="151" Height="151" Click="btnRfq_Click" />
+		<Button x:Name="btnCS" Style="{DynamicResource Clickable}" Content="Canvas Sheets" Margin="167,183,322,146" Background="#FF0362BA" FontSize="16" Width="151" Height="151" Click="btnCS_Click" />
+		<Button x:Name="btnManualCS" Style="{DynamicResource Clickable}" Content="Manual CS Process&#xd;&#xa;For&#xd;&#xa;Vice President" Margin="322,183,167,146" Background="#FF0362BA" FontSize="16" Width="151" Height="151" Click="btnManualCS_Click" />
+		<Button x:Name="btnItemReceiving" Style="{DynamicResource Clickable}" Content="Item Receiving" Margin="477,20,12,0" Background="#FF0362BA" FontSize="16" Width="151" Height="151" VerticalAlignment="Top" d:LayoutOverrides="Height" Click="btnItemReceiving_Click" />
+		<Button x:Name="btnPurchaseOrder" Style="{DynamicResource Clickable}" Content="Purchase Orders" Margin="477,183,12,146" Background="#FF0362BA" FontSize="16" Width="151" Height="151" Click="btnPurchaseOrder_Click" />
+	</Grid>
+</UserControl>
